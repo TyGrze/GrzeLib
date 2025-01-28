@@ -1,0 +1,7 @@
+/test
+/test/**
+
+/output
+/output/**
+
+compile_commands.json
