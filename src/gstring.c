@@ -67,6 +67,29 @@ String string_malloc(const char *ch) {
   return results;
 }
 
+/*
+ * @brief Compares two Strings
+ *
+ * @param[in] s1, to compare with s2
+ * @param[in] s2, to compare with s1
+ *
+ * @return 0 if the two Strings are equivalent, else -1
+ */
+int string_cmp(String *s1, String *s2) {
+  if (!s1 || !s2)
+    return -1;
+  if (!s1->ch || !s2->ch)
+    return -1;
+  if (s1->length != s2->length)
+    return -1;
+
+  for (int i = 0; i < s1->length; i++) {
+    if (s1->ch[i] != s2->ch[i])
+      return -1;
+  }
+
+  return 0;
+}
 // ================================================================================
 // ===                            Private Function
 // ================================================================================
