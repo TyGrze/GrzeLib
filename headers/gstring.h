@@ -17,6 +17,7 @@
 // ================================================================================
 
 #include <stdint.h>
+#include <stdbool.h>
 
 // ================================================================================
 // ===                                  Macros
@@ -36,6 +37,6 @@ typedef struct {
 // ================================================================================
 
 String string_malloc(const char *ch);
-int string_cmp(String *s1, String *s2);
+bool string_cmp(String *s1, String *s2);
 
 #endif // STRING_H
